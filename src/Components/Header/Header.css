@@ -1,0 +1,35 @@
+/* Header general */
+header {
+  background-color: #343a40; /* gris oscuro */
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navegación horizontal */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+/* Items del menú */
+nav ul li {
+  display: inline;
+}
+
+/* Estilo de los enlaces */
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+
+/* Hover de enlaces */
+nav ul li a:hover {
+  color: #ffc107; /* amarillo */
+}

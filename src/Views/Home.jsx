@@ -2,6 +2,7 @@ import Layout from '../Components/Layout/Layout'
 import {db} from "../Config/Firebase"
 import { collection,getDocs,doc } from 'firebase/firestore'
 import { useState,useEffect } from 'react'
+import "../Styles/Home.css"
 
 
 function Home() {
@@ -15,11 +16,14 @@ function Home() {
     const snapshot = await getDocs(productosRef)
     const docs = snapshot.docs.map((doc) => ({id:doc.id,...doc.data()}))
     setProductos(docs)
-
-    useEffect(()=>{
-      handleFetch()
-    },[])
   }
+
+  useEffect(()=>{
+      
+      handleFetch()
+      
+    },[])
+
   return (
     <Layout>
       <main>
@@ -35,9 +39,9 @@ function Home() {
             return(
               <div className='producto'>
                 <h1>{producto.name}</h1>
-                <p>{producto.price}</p>
-                <p>{producto.sku}</p>
-                <p>{producto.description}</p>
+                <p>Precio: {producto.price}</p>
+                <p>SKU: {producto.sku}</p>
+                <p>Descripcion: {producto.description}</p>
                 <button>Comprar</button>
               </div>
             )
