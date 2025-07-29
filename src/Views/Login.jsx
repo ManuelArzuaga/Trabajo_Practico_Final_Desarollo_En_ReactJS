@@ -1,6 +1,7 @@
 import Layout from "../Components/Layout/Layout"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import { useAuth } from "../Context/AuthContext"
 import "../Styles/Login.css"
 
 function Login(){
@@ -9,11 +10,12 @@ function Login(){
   const [password,setPassword] = useState("")
   const [error,setError] = useState(null)
   const [message,setMessage] = useState(null)
+  const {login} = useAuth()
 
   const navigate = useNavigate()
 
 
-  function handleSubmit(e){
+  async function handleSubmit(e){
 
     e.preventDefault()
     setError(null)
@@ -21,10 +23,11 @@ function Login(){
 
     if(!email || !password){
       setError("Complete los campos")
+      return
     }
 
     try {
-      console.log({email,password})
+      await login(email,password)
       setMessage("Usuario logueado")
       setEmail("")
       setPassword("")

@@ -1,36 +1,34 @@
 main {
   padding: 2rem;
   font-family: sans-serif;
+  background-color: #f5f5f5;
 }
 
-/* Banner */
 .Banner-Inicial {
+  background-color: #343a40;
+  color: white;
+  padding: 3rem 2rem;
   text-align: center;
-  background-color: #f8f9fa;
-  padding: 2rem;
-  margin-bottom: 2rem;
   border-radius: 12px;
+  margin-bottom: 2rem;
 }
 
 .Banner-Inicial h1 {
   font-size: 2rem;
-  color: #333;
+  margin: 0;
 }
 
-/* Productos grid */
 .Productos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
-/* Cada tarjeta de producto */
 .producto {
-  border: 1px solid #ccc;
+  background-color: white;
   border-radius: 10px;
-  padding: 1rem;
-  background-color: #ffffff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
 }
 
@@ -39,16 +37,18 @@ main {
 }
 
 .producto h1 {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
+  color: #333;
   margin-bottom: 0.5rem;
 }
 
 .producto p {
-  margin: 0.25rem 0;
+  margin: 0.3rem 0;
   color: #555;
+  font-size: 0.95rem;
 }
 
-/* Botón de comprar */
+
 .producto button {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
@@ -56,11 +56,50 @@ main {
   color: white;
   border: none;
   border-radius: 6px;
+  font-size: 0.9rem;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
 .producto button:hover {
   background-color: #0056b3;
-  transform: scale(1.05);
+}
+
+.botones-usuario {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.botones-usuario a,
+.botones-usuario button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+
+.botones-usuario a {
+  background-color: #ffc107;
+  color: white
+}
+
+.botones-usuario a:hover {
+  background-color: #e0a800;
+}
+
+
+.botones-usuario button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.botones-usuario button:hover {
+  background-color: #b02a37;
 }

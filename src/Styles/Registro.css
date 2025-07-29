@@ -14,13 +14,11 @@
   color: #333;
 }
 
-/* Formulario */
 #registro form {
   display: flex;
   flex-direction: column;
 }
 
-/* Etiquetas */
 #registro label {
   margin-top: 0.8rem;
   margin-bottom: 0.3rem;
@@ -28,7 +26,6 @@
   color: #444;
 }
 
-/* Inputs */
 #registro input {
   padding: 0.5rem;
   font-size: 1rem;
@@ -42,7 +39,6 @@
   border-color: #007bff;
 }
 
-/* Botón de registro */
 #registro button {
   margin-top: 1.5rem;
   padding: 0.6rem;
@@ -60,7 +56,6 @@
   background-color: #218838;
 }
 
-/* Mensajes */
 #registro p {
   margin-top: 1rem;
   text-align: center;

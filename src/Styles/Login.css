@@ -14,20 +14,17 @@
   color: #333;
 }
 
-/* Formulario */
 #Login form {
   display: flex;
   flex-direction: column;
 }
 
-/* Etiquetas */
 #Login label {
   margin-bottom: 0.5rem;
   font-weight: bold;
   color: #444;
 }
 
-/* Inputs */
 #Login input {
   padding: 0.5rem;
   margin-bottom: 1.2rem;
@@ -36,7 +33,6 @@
   font-size: 1rem;
 }
 
-/* Botón */
 #Login button {
   padding: 0.6rem;
   background-color: #007bff;
@@ -52,7 +48,6 @@
   background-color: #0056b3;
 }
 
-/* Mensajes de error o éxito */
 #Login p {
   margin-top: 1rem;
   text-align: center;

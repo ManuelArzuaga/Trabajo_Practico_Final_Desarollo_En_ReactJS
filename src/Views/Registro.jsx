@@ -1,6 +1,7 @@
 import Layout from "../Components/Layout/Layout"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import { useAuth } from "../Context/AuthContext"
 import "../Styles/Registro.css"
 
 function Registro(){
@@ -8,30 +9,33 @@ function Registro(){
   const [email,setEmail] = useState("")
   const [password,setPassword] = useState("")
   const [name,setName] = useState("")
-  const [Apellido,setApellido] = useState("")
+  const [apellido,setApellido] = useState("")
   const [error,setError] = useState(null)
   const [message,setMessage] = useState(null)
+
+  const {register} = useAuth()
 
   const navigate = useNavigate()
 
 
-  function handleSubmit(e){
+  async function handleSubmit(e){
 
     e.preventDefault()
     setError(null)
     setMessage(null)
 
-    if(!email || !password){
+    if(!email || !password || !name || !apellido){
       setError("Complete los campos")
+      return
     }
 
     try {
-      console.log({email,password})
-      setMessage("Usuario logueado")
+      await register(email,password,name,apellido)
+      setMessage("Usuario registrado")
       setEmail("")
       setPassword("")
       setName("")
-      setPassword("")
+      setApellido("")
 
       setTimeout(()=>{
         setMessage("Redirigiendo al home")

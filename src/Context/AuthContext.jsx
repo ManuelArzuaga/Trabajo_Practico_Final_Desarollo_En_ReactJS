@@ -20,7 +20,7 @@ function AuthProvider(props){
 
   const login = (email,password) => signInWithEmailAndPassword(auth,email,password)
 
-  const register = (email,password) => createUserWithEmailAndPassword(auth,email,password)
+  const register = (email,password,name,apellido) => createUserWithEmailAndPassword(auth,email,password,name,apellido)
 
   const logout = () => signOut(auth)
 

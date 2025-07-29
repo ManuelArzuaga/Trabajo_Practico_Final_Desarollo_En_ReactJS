@@ -1,5 +1,6 @@
 import Layout from "../Components/Layout/Layout";
 import { useLocation } from "react-router-dom";
+import "../Styles/Producto.css"
 
 function Producto(){
   

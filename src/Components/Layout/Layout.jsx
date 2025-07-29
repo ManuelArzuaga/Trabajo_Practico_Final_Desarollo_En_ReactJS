@@ -3,11 +3,13 @@ import Header from "../Header/Header"
 
 function Layout(props){
   return(
-    <>
-    <Header></Header>
-    {props.children}
-    <Footer></Footer>
-    </>
+    <div className="layout-container">
+      <Header></Header>
+      <main className="main-content">
+        {props.children}
+      </main>
+      <Footer></Footer>
+    </div>
   )
 }
 
