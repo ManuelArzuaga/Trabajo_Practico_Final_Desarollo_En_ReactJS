@@ -5,6 +5,7 @@ import NotFound from "../Views/NotFound"
 import Dashboard from "../Views/Dashboard"
 import Producto from "../Views/Producto"
 import EditProducto from "../Views/EditProducto"
+import Perfil from "../Views/Perfil"
 import {BrowserRouter,Route,Routes} from "react-router-dom"
 
 

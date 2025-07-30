@@ -4,9 +4,9 @@ import "../Styles/Producto.css"
 
 function Producto(){
   
-  const location = useLocation()
-
-  const producto = location.state
+const location = useLocation()
+ 
+const producto = location.state
 
   return(
     <Layout>
