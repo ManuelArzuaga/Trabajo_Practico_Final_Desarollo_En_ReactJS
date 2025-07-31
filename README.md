@@ -1,3 +1,22 @@
+Ejecucion: Npm install - Npm run dev
+
+Funciones:
+
+Sin usuario
+
+-Registro (guarda la informacion en la base de datos y crea un usuario)
+-Login (utiliza un usuario ya creado para ingresar)
+-Home con la lista de productos
+-Detalles del producto
+
+Con usuario
+
+-Home con la lista de productos
+-Detalles del producto
+-Dashboard para agregar un producto nuevo
+-Editar para modificar el producto seleccionado
+-Borrar para eliminar el producto seleccionado
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
