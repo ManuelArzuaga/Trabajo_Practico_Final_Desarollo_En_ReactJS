@@ -16,6 +16,7 @@ function Header(){
           {user && <>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/Dashboard">Dashboard</Link></li>
+            <li><Link to="/Perfil">Perfil</Link></li>
             <button onClick={HandleLogout}>Cerrar Sesion</button>
           </>
           }

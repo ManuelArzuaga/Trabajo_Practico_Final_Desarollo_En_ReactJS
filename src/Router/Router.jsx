@@ -18,6 +18,7 @@ function Router(){
         <Route path="/Registro" element={<Registro></Registro>}></Route>
         <Route path="/Dashboard" element={<Dashboard></Dashboard>}></Route>
         <Route path="/Producto" element={<Producto></Producto>}></Route>
+        <Route path="/Perfil" element={<Perfil></Perfil>}></Route>
         <Route path="/Editar-producto/:id" element={<EditProducto></EditProducto>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>

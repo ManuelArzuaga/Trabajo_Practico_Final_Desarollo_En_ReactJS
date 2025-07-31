@@ -8,7 +8,7 @@ const location = useLocation()
  
 const producto = location.state
 
-  return(
+return(
     <Layout>
       <div className="contenedor-producto">
         <h1>{producto.name}</h1>

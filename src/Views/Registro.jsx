@@ -2,7 +2,7 @@ import Layout from "../Components/Layout/Layout"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { useAuth } from "../Context/AuthContext"
-import {addDoc,collection} from "firebase/firestore"
+import {setDoc,collection, doc} from "firebase/firestore"
 import { db } from "../Config/Firebase"
 import "../Styles/Registro.css"
 
@@ -15,11 +15,10 @@ function Registro(){
   const [error,setError] = useState(null)
   const [message,setMessage] = useState(null)
 
-  const {register} = useAuth()
+  const {register,user} = useAuth()
   
 
   const navigate = useNavigate()
-
 
   async function handleSubmit(e){
 
@@ -34,12 +33,6 @@ function Registro(){
 
     try {
       await register(email,password,name,apellido)
-      await addDoc(collection(db,"Usuarios"),{
-        name:name,
-        apellido:apellido,
-        email:email,
-        password:password
-      })
       setMessage("Usuario registrado")
       setEmail("")
       setPassword("")
