@@ -1,4 +1,4 @@
-Ejecucion: Npm install - Npm run dev
+Ejecucion: git clone - Npm install - Npm run dev
 
 Funciones:
 
@@ -16,6 +16,7 @@ Con usuario
 -Dashboard para agregar un producto nuevo
 -Editar para modificar el producto seleccionado
 -Borrar para eliminar el producto seleccionado
+-Perfil para poder cambiar el Nombre,Apellido y contraseña
 
 # React + Vite
 
