@@ -57,7 +57,7 @@ function Perfil(){
       await updateDoc(docref,{name,apellido,password})
       
     } catch (error) {
-      setError(error.message)
+      setError("Por favor vuelva a iniciar sesion para modificar los campos")
       return
     }
     

@@ -13,6 +13,7 @@ return(
       <div className="contenedor-producto">
         <h1>{producto.name}</h1>
         <p>Precio: {producto.price}</p>
+        <p>Categoria: {producto.categoria}</p>
         <p>SKU: {producto.sku}</p>
         <p>Descripcion: {producto.description}</p>
         <button>Comprar</button>
