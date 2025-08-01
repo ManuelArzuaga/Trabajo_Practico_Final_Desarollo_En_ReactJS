@@ -52,12 +52,13 @@ function Perfil(){
     }
 
     try {
+      setError("")
       await updatePassword(user,password)
       const docref = doc(db,"Usuarios",user.uid)
       await updateDoc(docref,{name,apellido,password})
       
     } catch (error) {
-      setError("Por favor vuelva a iniciar sesion para modificar los campos")
+      setError(error.message)
       return
     }
     
